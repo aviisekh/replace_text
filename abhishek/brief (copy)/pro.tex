@@ -1,0 +1,178 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\huge \textsc{Amit Gupta}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Objective}
+A position as an intern in the field of IT with special interests in programming, information processing, and management systems.
+
+\section{Personal Information}
+
+\begin{tabular}{rl}
+    \textsc{Place and Date of Birth:} & Bhimdatta-18,Kahchanpur  | 24 Sept 1994 \\
+    \textsc{Address:}   & Dhulikhel, Kavre \\
+    \textsc{Nationality:} & Nepalese\\
+    \textsc{Language:} & Nepali, English, Hindi\\
+    \textsc{Phone:}     & (977)9843288950\\
+    \textsc{Email:}     & \href{mailto:aviisekh@gmail.com}{aviisekh@gmail.com}\\
+    \textsc{Github:} & \href{https://www.github.com/aviisekh}{github.com/aviisekh}\\
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Experience}
+\begin{tabular}{r|p{11cm}}
+ \emph{Current} & \textbf{Marketing person}\\ \textsc{April 2016} & \emph{\textsc{AIESEC} in \textsc{Kathmandu University}} \\&\footnotesize{Promotion, Creative Designs, Information Management, Social Media Market Analysis}\\\multicolumn{2}{c}{} \\
+ \textsc{Current} & \textbf{Active member} \\ \textsc{April 2016} &\emph{\textsc{KUCC} , \textsc{Kathmandu University}}\\&\footnotesize{Organizing Events, Conducting IT workshops, Conducting IT meetups}\\\multicolumn{2}{c}{} 
+\end{tabular}
+
+
+\section{Projects}
+\begin{tabular}{p{3cm}|p{10.6cm}}
+\textsc{HUSKY Robot} & \small{Husky is an automatic robot designed as the requirement for the competition organized by Robotics Association Nepal.}
+\\\multicolumn{2}{c}{} \\
+
+\textsc{Farmer's market Solution} & \small{Its a website that would ease the farmers to locate their nearest market. Django framework was used for backend development.}
+\\\multicolumn{2}{c}{} \\
+
+\textsc{LUDO game} &  \small{A two player desktop game programmed in Ruby.}
+\\\multicolumn{2}{c}{} \\
+
+\textsc{OCR} & \small{OCR is an character recognition desktop application programmed in C++ using OpenCV library.}
+\\\multicolumn{2}{c}{} \\
+
+\textsc{ASCII Image} & \small{Python Script that converts the pixels of image to ASCII characters without loosing the basic view the image.}
+\\\multicolumn{2}{c}{} \\
+
+\textsc{Engine Gaadi} & \small{A search engine developed on python developed for searching the contents of the local files of an e-library.}
+\\\multicolumn{2}{c}{} \\
+
+\textsc{Markdown to LaTex converter}&\small{Python Script to convert simple markup language i.e.Markdown to complex documentation language LaTex.}
+\\\multicolumn{2}{c}{} \\
+
+ \textsc{The Expense Diary} & \small{Desktop Appication that records the daily expense and incomes and help you to look at your expense logs and savings.}
+\end{tabular}
+
+
+
+\section{Skills}
+\begin{tabular}{rl}	
+\textsc{Programming Concepts:} &OOP, Datastructures, Design Patterns \\\\
+\textsc{Programming Skills:}  & Python, C, C++, Matlab, Shell Scripting, RUBY, Java, Android, CSS\\\\
+\textsc{Database:} & MySQL, SQLite\\\\
+\textsc{Framework:} &Django\\\\
+\textsc{Design and IDE tools:} & Adobe Photoshop, GIMP\\
+							   & vi/vim, Github, Android Studio, Eclipse, TexMaker\\\\
+
+\textsc{Office Tools/Typesetting:} & Microsoft Office, Libre Office Package\\
+								   & Markdown, HTML, LaTex\\\\
+								   
+\textsc{Operating Systems:} &Linux, Windows XP/7/8\\\\
+							
+
+\textsc{Non-technical Skills:} &Report Writing, Presentations, Communications\\\\
+\textsc{Expertise:} &OOP, Design Patterns, Python, C, MySQL, vi/vim, Linux \\
+					& LaTex, Markdown, Report Writing
+\end{tabular}
+
+
+\section{Acheivements}
+\begin{tabular}{rl}	
+ \textsc{Dec 2015}  & Won robotic competition conducted by Robotics Association Nepal(RAN) \\
+ & Automatic Akhada category\\
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+ \textsc{Current}  & Bachelors in \textsc{Computer Engineering}\\
+& \textbf{Kathmandu University},Dhulikhel, Kavre\\
+& \normalsize \textsc{Expected Graduation}: August 2016\\
+& \normalsize \textsc{Gpa}: 3.6+(so far)/4.0\\\\
+\textsc{August} 2012& HSEB 10+2 \\ 
+&\normalsize\textbf{Radiant Higher Secondary School}, Kanchanpur\\
+&Marks obtained: 79.5\%\\
+\end{tabular}
+
+\section{Volunteering and Participations}
+\begin{tabular}{rl}	
+ \textsc{Current}  & Organizing Committee for IT Meet 2016\\\\
+ \textsc{2015} & Organized counselling classes for the +2 students at Kanchanpur with local club.\\
+ &Ogranized the IT Meet, 2015\\\\
+ \textsc{2013} & Volunteered in Community Education Project at Charikot, Dolakha
+\end{tabular}
+
+\section{References}
+Available on request
+
+
+\end{document}
+
