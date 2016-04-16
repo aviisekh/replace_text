@@ -1,0 +1,2 @@
+#define the types of files you want to replace text for
+types=(".txt",".odt",".tex")
